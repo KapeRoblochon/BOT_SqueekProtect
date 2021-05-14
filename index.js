@@ -194,7 +194,7 @@ client.on('message', async message => {
 //warn
 client.on('message', async message => {
     if(message.content.startsWith(`${prefix}warn`)){
-        if(message.member.hasPermission('KICK_MEMBERS')){ 
+        if(message.member.hasPermission('BAN_MEMBERS')){ 
 
             const ttelement = new Discord.MessageEmbed()
                 .setColor('RED')
@@ -254,7 +254,7 @@ client.on('message', async message => {
 //reset warn
 client.on('message', async message => {
     if(message.content.startsWith(`${prefix}resetwarn`)) {
-        if(message.member.hasPermission('KICK_MEMBERS')){
+        if(message.member.hasPermission('BAN_MEMBERS')){
             const ttelement = new Discord.MessageEmbed()
                 .setColor('RED')
                 .setDescription(`Veuillez suivre le patern suivant : \`${prefix}resetwarn\` \`[Pseudo de la personne en mention]\``)
@@ -277,7 +277,7 @@ client.on('message', async message => {
 //view warn
 client.on('message', async message => {
     if(message.content.startsWith(`${prefix}viewwarn`)) {
-        if(message.member.hasPermission('KICK_MEMBERS')){
+        if(message.member.hasPermission('BAN_MEMBERS')){
             const ttelement = new Discord.MessageEmbed()
                 .setColor('RED')
                 .setDescription(`Veuillez suivre le patern suivant : \`${prefix}viewwarn\` \`[Pseudo de la personne en mention]\``)
@@ -346,7 +346,7 @@ const helpwarn = new Discord.MessageEmbed()
 .setThumbnail('https://images.emojiterra.com/google/android-10/512px/1f6e0.png')
 .setFooter('Squeek Protect')
 .setTimestamp()
-.setDescription(`**__Help Warn__**\n\nCette commande permet de warn une personne\n\nSyntaxe : \`${prefix}warn\` \`[membre]\`\n\nSpécificité : Au bout de 3 warns le membre est kick\n\nUtilisable avec la permission : *KICK_MEMBERS*`)
+.setDescription(`**__Help Warn__**\n\nCette commande permet de warn une personne\n\nSyntaxe : \`${prefix}warn\` \`[membre]\`\n\nSpécificité : Au bout de 3 warns le membre est ban\n\nUtilisable avec la permission : *KICK_MEMBERS*`)
 
 client.on('message', message => {
     if(message.content === prefix +'help warn'){
