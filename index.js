@@ -453,7 +453,7 @@ const info = new Discord.MessageEmbed()
     .setColor('BLUE')
     .setTimestamp()
     .setFooter('Squeek Protect')
-    .setDescription(`**Version du bot :** 1.0\n\n**Prefix :** ${prefix}\n\n**Créateur :** Kape_Roblochon#0001 `)
+    .setDescription(`**Version du bot :** 2.0\n\n**Prefix :** ${prefix}\n\n**Créateur :** Kape_Roblochon#0001 `)
 
 
 client.on('message', message => {
