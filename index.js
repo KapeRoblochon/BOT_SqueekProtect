@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client
 const prefix = "!"
-const log = "842070354922569739"
+const log = "842881905434165279"
 const bdd = require('./bdd.json');
 var fs = require('fs');
 
@@ -346,7 +346,7 @@ const helpwarn = new Discord.MessageEmbed()
 .setThumbnail('https://images.emojiterra.com/google/android-10/512px/1f6e0.png')
 .setFooter('Squeek Protect')
 .setTimestamp()
-.setDescription(`**__Help Warn__**\n\nCette commande permet de warn une personne\n\nSyntaxe : \`${prefix}warn\` \`[membre]\`\n\nSpécificité : Au bout de 3 warns le membre est ban\n\nUtilisable avec la permission : *KICK_MEMBERS*`)
+.setDescription(`**__Help Warn__**\n\nCette commande permet de warn une personne\n\nSyntaxe : \`${prefix}warn\` \`[membre]\`\n\nSpécificité : Au bout de 3 warns le membre est ban\n\nUtilisable avec la permission : *BAN_MEMBERS*`)
 
 client.on('message', message => {
     if(message.content === prefix +'help warn'){
@@ -359,7 +359,7 @@ const resetwarnhelp = new Discord.MessageEmbed()
 .setThumbnail('https://images.emojiterra.com/google/android-10/512px/1f6e0.png')
 .setFooter('Squeek Protect')
 .setTimestamp()
-.setDescription(`**__Help Reset Warn__**\n\nCette commande permet de reset tout les warns d'une personne\n\nSyntaxe : \`${prefix}resetwarn\` \`[membre]\`\n\nUtilisable avec la permission : *KICK_MEMBERS*`)
+.setDescription(`**__Help Reset Warn__**\n\nCette commande permet de reset tout les warns d'une personne\n\nSyntaxe : \`${prefix}resetwarn\` \`[membre]\`\n\nUtilisable avec la permission : *BAN_MEMBERS*`)
 
 client.on('message', message => {
     if(message.content === prefix +'help resetwarn'){
@@ -372,7 +372,7 @@ const viewwanrhelp = new Discord.MessageEmbed()
 .setThumbnail('https://images.emojiterra.com/google/android-10/512px/1f6e0.png')
 .setFooter('Squeek Protect')
 .setTimestamp()
-.setDescription(`**__Help View Warn__**\n\nCette commande permet de voir le nombre de warn d'une personne\n\nSyntaxe : \`${prefix}viewwarn\` \`[membre]\`\n\nUtilisable avec la permission : *KICK_MEMBERS*`)
+.setDescription(`**__Help View Warn__**\n\nCette commande permet de voir le nombre de warn d'une personne\n\nSyntaxe : \`${prefix}viewwarn\` \`[membre]\`\n\nUtilisable avec la permission : *BAN_MEMBERS*`)
 
 client.on('message', message => {
     if(message.content === prefix +'help viewwarn'){
