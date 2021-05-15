@@ -67,14 +67,14 @@ client.on('message', async message => {
         .setDescription(`Veuillez suivre le patern suivant : \`${prefix}ban\` \`[Pseudo de la personne en mention]\` \`[Raison]\``)
         if(!reason) return message.channel.send(ttelement)
 
-        const banembed = new Discord.MessageEmbed()
-                .setColor('RED')
-                .setTitle('__KICK__')
-                .setDescription(`${user} à été kick\n**Raison :** ${reason}\n**Autheur : ${message.author}**`)
-                .setTimestamp()
-                .setFooter('Squeek Protect')
+        const good = new Discord.MessageEmbed()
+            .setColor('RED')
+            .setFooter('Squeek Protect')
+            .setTimestamp()
+            .setTitle('__KICK__')
+            .setDescription(`Le membre ${user} a été kick\n**Autheur :** ${message.author}\n**Raison :** ${reason}`)
 
-        message.channel.send(banembed)
+        client.channels.cache.get(log).send(good)
         
 
     }
@@ -100,14 +100,14 @@ client.on('message', async message => {
         toKick.kick({
             reason: reason
         })
-        const kickembed = new Discord.MessageEmbed()
-                .setColor('RED')
-                .setTitle('__KICK__')
-                .setDescription(`${user} à été kick\n**Raison :** ${reason}\n**Autheur : ${message.author}**`)
-                .setTimestamp()
-                .setFooter('Squeek Protect')
+        const good = new Discord.MessageEmbed()
+            .setColor('RED')
+            .setFooter('Squeek Protect')
+            .setTimestamp()
+            .setTitle('__KICK__')
+            .setDescription(`Le membre ${user} a été kick\n**Autheur :** ${message.author}\n**Raison :** ${reason}`)
 
-        message.channel.send(kickembed)
+        client.channels.cache.get(log).send(good)
 
     }
 })
