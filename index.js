@@ -3,7 +3,6 @@ const client = new Discord.Client
 const prefix = "!"
 const log = "842881905434165279"
 const bvn = "709513554092359682"
-const bye = '709513634207760385'
 const bdd = require('./bdd.json');
 var fs = require('fs');
 const Canvas = require('canvas')
@@ -518,5 +517,5 @@ client.on('guildMemberRemove', async member => {
 
     const attachment = new Discord.MessageAttachment(canvas.toBuffer(), './Welcome.jpg');
     
-    client.channels.cache.get(bye).send(attachment);
+    client.channels.cache.get(bvn).send(attachment);
 })
